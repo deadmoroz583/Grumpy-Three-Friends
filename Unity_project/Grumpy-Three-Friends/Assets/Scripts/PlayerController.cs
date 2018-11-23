@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -12,7 +13,6 @@ public class PlayerController : MonoBehaviour {
     private bool isFacingRight = true;
     //ссылка на компонент анимаций
     private Animator anim;
-	Rigidbody2D rigid2D;
 	
 	public int speed;
 	
@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour {
 	GameObject heart_3;
 	
 	GameObject pause;
+	GameObject dialog;
+	GameObject history;
 	
 	Vector3 platformsX;
 	GameObject platforms;
@@ -71,9 +73,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start ()
-	{		
+	{			
 		anim = GetComponent<Animator>();
-		rigid2D = GetComponent<Rigidbody2D>();
 		
 		heart_1 = GameObject.Find("Heart_1");
 		heart_2 = GameObject.Find("Heart_2");
@@ -81,6 +82,8 @@ public class PlayerController : MonoBehaviour {
 		
 		pause = GameObject.Find("Pause");
 		pause.SetActive(false);
+		
+		dialog = GameObject.Find("DialogPanel");
 		
 		panel = GameObject.Find("Background");
 		tempPosPanel = panel.transform.position;
@@ -112,14 +115,6 @@ public class PlayerController : MonoBehaviour {
         //1 возвращается при нажатии на клавиатуре стрелки вправо (или клавиши D)
         float move = Input.GetAxis("Horizontal");
 
-        //в компоненте анимаций изменяем значение параметра Speed на значение оси Х.
-        //приэтом нам нужен модуль значения
-        anim.SetFloat("Speed", Mathf.Abs(move));
-
-        //обращаемся к компоненту персонажа RigidBody2D. задаем ему скорость по оси Х, 
-        //равную значению оси Х умноженное на значение макс. скорости
-        rigid2D.velocity = new Vector2(move * maxSpeed, rigid2D.velocity.y);
-
         //если нажали клавишу для перемещения вправо, а персонаж направлен влево
         if(move > 0 && !isFacingRight)
             //отражаем персонажа вправо
@@ -130,9 +125,12 @@ public class PlayerController : MonoBehaviour {
 		
 		tempPos = transform.position;
 		
-		MoveRight();
-		MoveLeft();
-		Jump();
+		if (dialog.activeSelf == false && pause.activeSelf == false)
+		{
+			MoveRight();
+			MoveLeft();
+			Jump();
+		}
 		
 		if (transform.position.y < -300)
 		{
@@ -196,22 +194,24 @@ public class PlayerController : MonoBehaviour {
 	
 	void Pause()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) && dialog.activeSelf == false)
 		{
 			if (pause.activeSelf == false)
 			{
 				pause.SetActive(true);
+				anim.enabled = false;
 			}
 			else
 			{
 				pause.SetActive(false);
+				anim.enabled = true;
 			}
 		}
 	}
 	
 	void Jump()
 	{
-		if (Input.GetKeyDown(KeyCode.Space) && pause.activeSelf == false)
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			//определяем, на земле ли персонаж
 			isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround); 
@@ -229,7 +229,7 @@ public class PlayerController : MonoBehaviour {
 	
 	void MoveRight()
 	{
-		if (Input.GetKey(KeyCode.D) && pause.activeSelf == false)
+		if (Input.GetKey(KeyCode.D))
 		{
 			anim.enabled = true;
 			
@@ -237,6 +237,14 @@ public class PlayerController : MonoBehaviour {
 			if (isColldFinal)
 			{
 				if (SceneManager.GetActiveScene().name == "Level_Frog_1")
+				{
+					SceneManager.LoadScene("Level_Frog_2");
+				}
+				if (SceneManager.GetActiveScene().name == "Level_Frog_2")
+				{
+					SceneManager.LoadScene("Level_Frog_3");
+				}
+				if (SceneManager.GetActiveScene().name == "Level_Frog_3")
 				{
 					SceneManager.LoadScene("Level_Dog_1");
 				}
@@ -281,17 +289,14 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 		}
-		if (Input.GetKeyUp(KeyCode.D) && pause.activeSelf == false)
-		{
-			anim.enabled = false;
-		}
 	}
 	
 	void MoveLeft()
 	{
-		if (Input.GetKey (KeyCode.A) && pause.activeSelf == false)
+		if (Input.GetKey (KeyCode.A))
 		{
 			anim.enabled = true;
+			
 			isColldL = Physics2D.OverlapCircle(wallCheckL.position, wallRadius, whatIsGround); 
 			if (isColldL)
 				return;
@@ -318,10 +323,6 @@ public class PlayerController : MonoBehaviour {
 					}
 				}
 			}
-		}
-		if (Input.GetKeyUp(KeyCode.D) && pause.activeSelf == false)
-		{
-			anim.enabled = false;
 		}
 	}
 }

@@ -2368,7 +2368,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d9daa3e6c4429c409f3ae3b5011bc98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eaee8bda72c5bc742af11a7839f797cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2646,7 +2646,7 @@ Transform:
   m_GameObject: {fileID: 803227618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 125, z: 1}
+  m_LocalScale: {x: 100, y: 127, z: 1}
   m_Children:
   - {fileID: 1608990754}
   - {fileID: 698361897}
@@ -4095,7 +4095,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d9daa3e6c4429c409f3ae3b5011bc98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eaee8bda72c5bc742af11a7839f797cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4115,6 +4115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1482236275}
   - component: {fileID: 1482236274}
+  - component: {fileID: 1482236276}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -4131,7 +4132,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df0c010b87a586146bc1a929b1a10d6f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 23c3492556d608040a3da504e4c402b6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4230,6 +4231,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482236276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1482236273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701bad31de67ebe4a8f3e312b5d60ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 1482236274}
 --- !u!1 &1514564563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1448135811919342, guid: ed82ac99ab88cb04d86088add8865163,
@@ -4581,7 +4594,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d9daa3e6c4429c409f3ae3b5011bc98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eaee8bda72c5bc742af11a7839f797cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
