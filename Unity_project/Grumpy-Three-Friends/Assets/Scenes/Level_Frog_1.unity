@@ -1875,6 +1875,8 @@ GameObject:
   - component: {fileID: 620201169}
   - component: {fileID: 620201168}
   - component: {fileID: 620201167}
+  - component: {fileID: 620201170}
+  - component: {fileID: 620201171}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1889,7 +1891,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 620201164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -440.2, y: -219, z: -10}
+  m_LocalPosition: {x: -440.2, y: -220.4, z: -10}
   m_LocalScale: {x: 400, y: 400, z: 1}
   m_Children:
   - {fileID: 1291120810}
@@ -1954,7 +1956,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0012057051, y: -0.0003915131}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1965,7 +1967,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34, y: 0.35}
+  m_Size: {x: 0.34241164, y: 0.35078293}
   m_EdgeRadius: 0
 --- !u!50 &620201168
 Rigidbody2D:
@@ -1998,18 +2000,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc5eb8d09eb86644ae082daf99ca02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 10
   speed: 10
   jumpForce: 50000
   groundCheck: {fileID: 977260619}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  whatIsFinal:
+    serializedVersion: 2
+    m_Bits: 1024
   wallCheckR: {fileID: 2048730373}
   wallCheckL: {fileID: 385657731}
   trapCheck: {fileID: 1291120810}
   whatIsTrap:
     serializedVersion: 2
     m_Bits: 512
+--- !u!95 &620201170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 620201164}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b71407e20a01dd44861a591098d132f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &620201171
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 620201164}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e87d5213348cc92458ba50aa1b840140, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &651660837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,8 +2865,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.21, y: -69.61}
-  m_SizeDelta: {x: 158.1, y: 7.07}
+  m_AnchoredPosition: {x: 0.37, y: -70.86}
+  m_SizeDelta: {x: 157.79, y: 2.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977260620
 MonoBehaviour:
@@ -4389,7 +4427,7 @@ GameObject:
   - component: {fileID: 1566569885}
   - component: {fileID: 1566569887}
   - component: {fileID: 1566569886}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: FinalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

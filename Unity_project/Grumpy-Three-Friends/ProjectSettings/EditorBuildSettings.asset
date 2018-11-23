@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Frog_1.unity
     guid: fe13957ba2427cd42bcc33f999eaff24
+  - enabled: 1
+    path: Assets/Scenes/Level_Dog_1.unity
+    guid: 519f7165cbf609442a54063a0ab219ec
+  - enabled: 1
+    path: Assets/Scenes/Level_Cat_1.unity
+    guid: ae5439b8621ea1b4d90ac440cd87d02e
+  - enabled: 1
+    path: Assets/Scenes/Final_Boss.unity
+    guid: f7bdaeb7c36fe7e4f9bfe5fe2c20ef13
   m_configObjects: {}
