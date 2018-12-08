@@ -250,6 +250,14 @@ public class PlayerController : MonoBehaviour {
 				}
 				if (SceneManager.GetActiveScene().name == "Level_Dog_1")
 				{
+					SceneManager.LoadScene("Level_Dog_2");
+				}
+				if (SceneManager.GetActiveScene().name == "Level_Dog_2")
+				{
+					SceneManager.LoadScene("Level_Dog_3");
+				}
+				if (SceneManager.GetActiveScene().name == "Level_Dog_3")
+				{
 					SceneManager.LoadScene("Level_Cat_1");
 				}
 				if (SceneManager.GetActiveScene().name == "Level_Cat_1")
@@ -258,7 +266,7 @@ public class PlayerController : MonoBehaviour {
 				}
 				if (SceneManager.GetActiveScene().name == "Final_Boss")
 				{
-					SceneManager.LoadScene("Main_Menu");
+					SceneManager.LoadScene("Final_Epilog");
 				}
 			}
 			
@@ -324,5 +332,10 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 		}
+	}
+	
+	void Attack()
+	{
+		
 	}
 }
