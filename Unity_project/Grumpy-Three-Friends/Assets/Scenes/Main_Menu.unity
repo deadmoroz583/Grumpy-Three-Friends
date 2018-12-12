@@ -929,6 +929,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410105500}
   m_CullTransparentMesh: 0
+--- !u!114 &418700844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114931033792842880, guid: 3ef28bf7ba1522f4f84debd58485b1ab,
+    type: 2}
+  m_PrefabInternal: {fileID: 937760951}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &422628210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1335,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1776901812668538, guid: 6c98059a6d5d401419c511785c5de689, type: 2}
+      propertyPath: m_Name
+      value: Ach_5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c98059a6d5d401419c511785c5de689, type: 2}
   m_IsPrefabAsset: 0
@@ -1647,6 +1657,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c192315d7e8266409f88d11dedc7864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achimg:
+  - {fileID: 1594682322}
+  - {fileID: 418700844}
+  - {fileID: 1828769745}
+  - {fileID: 716905961}
+  - {fileID: 1907824454}
+  - {fileID: 1454458700}
+  - {fileID: 1561757221}
+  m_Texture: {fileID: 2800000, guid: ff4a32da068e4f34baebe84cbb6c65e3, type: 3}
 --- !u!4 &623120959
 Transform:
   m_ObjectHideFlags: 0
@@ -1783,6 +1802,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677480259}
   m_CullTransparentMesh: 0
+--- !u!114 &716905961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114094816306921428, guid: 16b34272b288c4a4b9c5627d11a0f755,
+    type: 2}
+  m_PrefabInternal: {fileID: 878654949}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &747510424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2041,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471064434710890, guid: f266d72248230ac4b956f364ab1a64f9, type: 2}
+      propertyPath: m_Name
+      value: Ach_6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f266d72248230ac4b956f364ab1a64f9, type: 2}
@@ -2504,6 +2533,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1042543646301768, guid: 16b34272b288c4a4b9c5627d11a0f755, type: 2}
+      propertyPath: m_Name
+      value: Ach_4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b34272b288c4a4b9c5627d11a0f755, type: 2}
   m_IsPrefabAsset: 0
@@ -2678,6 +2711,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052665585382638, guid: 3ef28bf7ba1522f4f84debd58485b1ab, type: 2}
+      propertyPath: m_Name
+      value: Ach_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef28bf7ba1522f4f84debd58485b1ab, type: 2}
@@ -3099,6 +3136,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553605894612804, guid: 7197295f51211b04087716c193d389f3, type: 2}
+      propertyPath: m_Name
+      value: Ach_7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7197295f51211b04087716c193d389f3, type: 2}
@@ -3759,6 +3800,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea141a51a7e5d914b8a5602f2d8866a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1454458700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114196876566640556, guid: f266d72248230ac4b956f364ab1a64f9,
+    type: 2}
+  m_PrefabInternal: {fileID: 809737811}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1469222825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +4035,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523832662}
   m_CullTransparentMesh: 0
+--- !u!114 &1561757221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114292605102896888, guid: 7197295f51211b04087716c193d389f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 991931593}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1594682322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114314467594954726, guid: 900a398383ef1314e850e1bfc6f82f56,
+    type: 2}
+  m_PrefabInternal: {fileID: 600328571}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1617770584
 Prefab:
   m_ObjectHideFlags: 0
@@ -4084,6 +4143,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435916071072294, guid: 7b80f698ce65e2e4dae611737722bda9, type: 2}
+      propertyPath: m_Name
+      value: Ach_3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b80f698ce65e2e4dae611737722bda9, type: 2}
@@ -4359,6 +4422,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1828769745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114302256099023654, guid: 7b80f698ce65e2e4dae611737722bda9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1617770584}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1864949683
 GameObject:
   m_ObjectHideFlags: 0
@@ -4508,6 +4577,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1886230494}
   m_CullTransparentMesh: 0
+--- !u!114 &1907824454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114694387654534628, guid: 6c98059a6d5d401419c511785c5de689,
+    type: 2}
+  m_PrefabInternal: {fileID: 489148936}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!224 &1957067597 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224472052166060524, guid: 7b80f698ce65e2e4dae611737722bda9,
