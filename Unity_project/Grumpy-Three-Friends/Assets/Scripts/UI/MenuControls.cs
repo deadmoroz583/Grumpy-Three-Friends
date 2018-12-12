@@ -9,6 +9,7 @@ public class MenuControls : MonoBehaviour
 	
 	public void PlayPressed()
     {
+		GlobalNames.ach[0] = 1;
         SceneManager.LoadScene("Level_Frog_1");
     }
 	
