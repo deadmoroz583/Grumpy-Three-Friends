@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 	//Столкновение с ловушками
 	private bool isTrapped = false;
 	public Transform trapCheck;
-	private float trapRadius = 80;
+	private float trapRadius = 50;
 	public LayerMask whatIsTrap;
 	
 	int checkHitDelay;
@@ -246,6 +246,8 @@ public class PlayerController : MonoBehaviour {
 				}
 				if (SceneManager.GetActiveScene().name == "Level_Frog_3")
 				{
+					GlobalNames.ach[1] = 1;
+					GlobalNames.ach[2] = 1;
 					SceneManager.LoadScene("Level_Dog_1");
 				}
 				if (SceneManager.GetActiveScene().name == "Level_Dog_1")
@@ -258,14 +260,18 @@ public class PlayerController : MonoBehaviour {
 				}
 				if (SceneManager.GetActiveScene().name == "Level_Dog_3")
 				{
+					GlobalNames.ach[3] = 1;
+					GlobalNames.ach[4] = 1;
 					SceneManager.LoadScene("Level_Cat_1");
 				}
 				if (SceneManager.GetActiveScene().name == "Level_Cat_1")
 				{
+					GlobalNames.ach[5] = 1;
 					SceneManager.LoadScene("Final_Boss");
 				}
 				if (SceneManager.GetActiveScene().name == "Final_Boss")
 				{
+					GlobalNames.ach[6] = 1;
 					SceneManager.LoadScene("Final_Epilog");
 				}
 			}
