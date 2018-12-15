@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Final_Boss.unity
+- path: Assets/Scenes/Level_Dog_3.unity
   isLoaded: 1
   isActive: 1
