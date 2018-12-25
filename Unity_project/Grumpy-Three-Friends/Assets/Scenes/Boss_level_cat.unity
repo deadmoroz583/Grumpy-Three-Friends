@@ -695,6 +695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6768c750d9b0b143ac34783b51a04eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DiagPanel: {fileID: 0}
+  DiagBar_end: {fileID: 0}
 --- !u!212 &246290907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1600,6 +1602,11 @@ Prefab:
         type: 2}
       propertyPath: ForceValue
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114790121492422786, guid: 467d1110302b07a4d80e2f823ccdbb0e,
+        type: 2}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114807941683516176, guid: 467d1110302b07a4d80e2f823ccdbb0e, type: 2}

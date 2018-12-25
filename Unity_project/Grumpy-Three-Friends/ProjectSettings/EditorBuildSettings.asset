@@ -35,12 +35,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level_Cat_3.unity
     guid: ad40fc0ef519167488d6797a27ae9934
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Final_Boss.unity
     guid: f7bdaeb7c36fe7e4f9bfe5fe2c20ef13
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Cat_1.unity
     guid: 621757766a3ff6e42a91032dade5a560

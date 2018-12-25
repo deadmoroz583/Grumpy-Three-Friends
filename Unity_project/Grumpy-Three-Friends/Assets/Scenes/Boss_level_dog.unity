@@ -347,6 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6768c750d9b0b143ac34783b51a04eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DiagPanel: {fileID: 0}
+  DiagBar_end: {fileID: 0}
 --- !u!212 &246290907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1596,6 +1598,11 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114555857409142936, guid: 187be75807de8c94baf8c4b1e0710dbe,
+        type: 2}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187be75807de8c94baf8c4b1e0710dbe, type: 2}
