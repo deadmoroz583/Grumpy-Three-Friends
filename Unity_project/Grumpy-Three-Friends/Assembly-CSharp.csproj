@@ -53,14 +53,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\anim.cs" />
+     <Compile Include="Assets\Destroy.cs" />
+     <Compile Include="Assets\Finel.cs" />
+     <Compile Include="Assets\Frize.cs" />
+     <Compile Include="Assets\Move_Platform.cs" />
+     <Compile Include="Assets\PauseS.cs" />
+     <Compile Include="Assets\Play_Animation.cs" />
+     <Compile Include="Assets\Scripts\Boss.cs" />
+     <Compile Include="Assets\Scripts\ButtonManager.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Character.cs" />
+     <Compile Include="Assets\Scripts\DieZone.cs" />
      <Compile Include="Assets\Scripts\GlobalNames.cs" />
+     <Compile Include="Assets\Scripts\LivesBar.cs" />
+     <Compile Include="Assets\Scripts\LivesBar_boss.cs" />
+     <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\Music.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\UI\Epilog.cs" />
      <Compile Include="Assets\Scripts\UI\LevelControls.cs" />
      <Compile Include="Assets\Scripts\UI\MenuControls.cs" />
      <Compile Include="Assets\Scripts\UI\Settings_Toggle.cs" />
+     <Compile Include="Assets\Scripts\Unit.cs" />
      <Compile Include="Assets\Scripts\Volume.cs" />
+     <Compile Include="Assets\Scripts\Warm.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/Учёба/4-ый курс/1-ый семестр/Технологии программирования/Курсовая/Репозиторий/Grumpy-Three-Friends/Unity_project/Grumpy-Three-Friends/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

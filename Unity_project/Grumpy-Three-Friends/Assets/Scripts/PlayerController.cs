@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
+    
 	//переменная для установки макс. скорости персонажа
     public float maxSpeed = 10f; 
     //переменная для определения направления персонажа вправо/влево
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour {
     //ссылка на компонент анимаций
     private Animator anim;
 	
-	public int speed;
+	public float speed;
 	
 	int lives;
 	GameObject heart_1;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 	
 	GameObject pause;
 	GameObject dialog;
+    public GameObject DialogBar_end;
 	GameObject history;
 	
 	Vector3 platformsX;
@@ -68,6 +70,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform trapCheck;
 	private float trapRadius = 50;
 	public LayerMask whatIsTrap;
+    private string ChekcSceneName;
 	
 	int checkHitDelay;
 	
@@ -103,7 +106,10 @@ public class PlayerController : MonoBehaviour {
 		
 		lives = 3;
 		anim.enabled = false;
-	}
+        ChekcSceneName = SceneManager.GetActiveScene().name;
+
+        //DialogBar_end = GameObject.Find("DialogBar_end");
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -114,7 +120,7 @@ public class PlayerController : MonoBehaviour {
         //-1 возвращается при нажатии на клавиатуре стрелки влево (или клавиши А),
         //1 возвращается при нажатии на клавиатуре стрелки вправо (или клавиши D)
         float move = Input.GetAxis("Horizontal");
-
+        
         //если нажали клавишу для перемещения вправо, а персонаж направлен влево
         if(move > 0 && !isFacingRight)
             //отражаем персонажа вправо
@@ -236,40 +242,63 @@ public class PlayerController : MonoBehaviour {
 			isColldFinal = Physics2D.OverlapCircle(wallCheckR.position, wallRadius, whatIsFinal); 
 			if (isColldFinal)
 			{
-				if (SceneManager.GetActiveScene().name == "Level_Frog_1")
+				if (ChekcSceneName == "Level_Frog_1")
 				{
-					SceneManager.LoadScene("Level_Frog_2");
-				}
-				if (SceneManager.GetActiveScene().name == "Level_Frog_2")
+                    dialog.SetActive(true);
+                    DialogBar_end.SetActive(true);
+                    //SceneManager.LoadScene("Level_Frog_2");
+                }
+				if (ChekcSceneName == "Level_Frog_2")
 				{
-					SceneManager.LoadScene("Level_Frog_3");
-				}
-				if (SceneManager.GetActiveScene().name == "Level_Frog_3")
+                    dialog.SetActive(true);
+                    DialogBar_end.SetActive(true);
+                    //SceneManager.LoadScene("Level_Frog_3");
+                }
+				if (ChekcSceneName == "Level_Frog_3")
 				{
 					GlobalNames.ach[1] = 1;
 					GlobalNames.ach[2] = 1;
-					SceneManager.LoadScene("Level_Dog_1");
-				}
-				if (SceneManager.GetActiveScene().name == "Level_Dog_1")
+                    dialog.SetActive(true);
+                    DialogBar_end.SetActive(true);
+                    //SceneManager.LoadScene("Level_Dog_1");
+                }
+				if (ChekcSceneName == "Level_Dog_1")
 				{
-					SceneManager.LoadScene("Level_Dog_2");
-				}
-				if (SceneManager.GetActiveScene().name == "Level_Dog_2")
+                    dialog.SetActive(true);
+                    DialogBar_end.SetActive(true);
+                    //SceneManager.LoadScene("Level_Dog_2");
+                }
+				if (ChekcSceneName == "Level_Dog_2")
 				{
-					SceneManager.LoadScene("Level_Dog_3");
-				}
-				if (SceneManager.GetActiveScene().name == "Level_Dog_3")
+                    dialog.SetActive(true);
+                    DialogBar_end.SetActive(true);
+                    //SceneManager.LoadScene("Level_Dog_3");
+                }
+				if (ChekcSceneName == "Level_Dog_3")
 				{
-					GlobalNames.ach[3] = 1;
+                    
+                    GlobalNames.ach[3] = 1;
 					GlobalNames.ach[4] = 1;
-					SceneManager.LoadScene("Level_Cat_1");
-				}
-				if (SceneManager.GetActiveScene().name == "Level_Cat_1")
+                    dialog.SetActive(true);
+                    DialogBar_end.SetActive(true);
+                    //SceneManager.LoadScene("Cat_1");
+                }
+				if (ChekcSceneName == "Level_Cat_1")
 				{
-					GlobalNames.ach[5] = 1;
-					SceneManager.LoadScene("Final_Boss");
+
+					SceneManager.LoadScene("Level_Cat_2");
 				}
-				if (SceneManager.GetActiveScene().name == "Final_Boss")
+                if (ChekcSceneName == "Level_Cat_2")
+                {
+                    SceneManager.LoadScene("Level_Cat_3");
+                }
+                if (ChekcSceneName == "Level_Cat_3")
+                {
+                    GlobalNames.ach[5] = 1;
+                    SceneManager.LoadScene("Final_Boss");
+                }
+
+                if (ChekcSceneName == "Final_Boss")
 				{
 					GlobalNames.ach[6] = 1;
 					SceneManager.LoadScene("Final_Epilog");
@@ -287,19 +316,39 @@ public class PlayerController : MonoBehaviour {
 				}
 				else
 				{
-					if (tempPosPanel.x - speed > -1280)
-					{
-						tempPosPanel.x -= speed;
-						panel.transform.position = tempPosPanel;
-						tempPosTraps.x -= speed;
-						traps.transform.position = tempPosTraps;
-						platformsX.x -= speed;
-						platforms.transform.position = platformsX;
-					}
-					else
-					{
-						tempPosPanel.x = 0;
-					}
+                    if ((ChekcSceneName == "Level_Cat_1") || (ChekcSceneName == "Level_Cat_2") || (ChekcSceneName == "Level_Cat_3"))
+                    {
+                        if (tempPosPanel.x - speed > -(1280 * 3.333305))
+                        {
+                            tempPosPanel.x -= speed;
+                            panel.transform.position = tempPosPanel;
+                            tempPosTraps.x -= speed;
+                            traps.transform.position = tempPosTraps;
+                            platformsX.x -= speed;
+                            platforms.transform.position = platformsX;
+                        }
+                        else
+                        {
+                            tempPosPanel.x = 0;
+                        }
+                    }
+                    else
+                    {
+                        if (tempPosPanel.x - speed > -(1280))
+                        {
+                            tempPosPanel.x -= speed;
+                            panel.transform.position = tempPosPanel;
+                            tempPosTraps.x -= speed;
+                            traps.transform.position = tempPosTraps;
+                            platformsX.x -= speed;
+                            platforms.transform.position = platformsX;
+                        }
+                        else
+                        {
+                            tempPosPanel.x = 0;
+                        }
+                    }
+                   
 				}
 			}
 		}
