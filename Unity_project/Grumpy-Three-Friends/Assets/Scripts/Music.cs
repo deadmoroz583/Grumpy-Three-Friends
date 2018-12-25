@@ -9,5 +9,5 @@ public class Music : MonoBehaviour
 	void Start ()
 	{
 		music.volume = (float)GlobalNames.soundVolume;
-	}
+    }
 }

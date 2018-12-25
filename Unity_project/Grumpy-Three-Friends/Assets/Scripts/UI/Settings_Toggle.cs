@@ -9,7 +9,7 @@ public class Settings_Toggle : MonoBehaviour
     void Start()
     {
         m_Toggle = GetComponent<Toggle>();
-		
+        //m_Toggle.isOn =;
         m_Toggle.onValueChanged.AddListener(delegate {
                 ToggleValueChanged(m_Toggle);
             });
