@@ -26,12 +26,39 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Dog_3.unity
     guid: 6d16e99804c13cb49ae2f04622c4ee16
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_Cat_1.unity
     guid: ae5439b8621ea1b4d90ac440cd87d02e
+  - enabled: 0
+    path: Assets/Scenes/Level_Cat_2.unity
+    guid: c8369ea6132dc8543861074ad8d41ca9
+  - enabled: 0
+    path: Assets/Scenes/Level_Cat_3.unity
+    guid: ad40fc0ef519167488d6797a27ae9934
   - enabled: 1
     path: Assets/Scenes/Final_Boss.unity
     guid: f7bdaeb7c36fe7e4f9bfe5fe2c20ef13
+  - enabled: 1
+    path: Assets/Scenes/Cat_1.unity
+    guid: 621757766a3ff6e42a91032dade5a560
+  - enabled: 1
+    path: Assets/Scenes/Cat_2.unity
+    guid: 36b10d9a5caf49747b067e20c0a2b775
+  - enabled: 1
+    path: Assets/Scenes/Cat_3.unity
+    guid: 7f63f286ecc46ff45b57720192b00e57
+  - enabled: 1
+    path: Assets/Scenes/Select.unity
+    guid: 59dc2258488233646b24af6c3970d81e
+  - enabled: 1
+    path: Assets/Scenes/Boss_level_cat.unity
+    guid: c2eb11ad62d40924e8fdb939d4edf5b7
+  - enabled: 1
+    path: Assets/Scenes/Boss_level_frog.unity
+    guid: 76d84e8261459e64f9b09aca0a412a71
+  - enabled: 1
+    path: Assets/Scenes/Boss_level_dog.unity
+    guid: 04fc63c6cf0088e4ea8e7348f21bb205
   - enabled: 1
     path: Assets/Scenes/Final_Epilog.unity
     guid: 0abc4bd5588aa224d861d82701769af9
